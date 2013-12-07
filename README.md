@@ -6,11 +6,11 @@ Example for a server Soap with services and client-server Rest that use this ser
 Schema
 ======
 
-Server SOAP     Server Rest         
+Server SOAP..........Server Rest         
 
-findAll         findAll(){  -------> Client    
-    --------------->
-								} 
+findAll...............findAll(){...-------> Client    
+....-------------------->
+......................}
 				  
 
 I used Netbeans and BD example Java.
