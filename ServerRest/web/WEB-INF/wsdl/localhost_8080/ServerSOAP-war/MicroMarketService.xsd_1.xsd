@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://soap.service/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://soap.service/">
+
+<xs:element name="countMicroMarket" type="tns:countMicroMarket"/>
+
+<xs:element name="countMicroMarketResponse" type="tns:countMicroMarketResponse"/>
+
+<xs:element name="createMicroMarket" type="tns:createMicroMarket"/>
+
+<xs:element name="editMicroMarket" type="tns:editMicroMarket"/>
+
+<xs:element name="findAllMicroMarket" type="tns:findAllMicroMarket"/>
+
+<xs:element name="findAllMicroMarketResponse" type="tns:findAllMicroMarketResponse"/>
+
+<xs:element name="findMicroMarket" type="tns:findMicroMarket"/>
+
+<xs:element name="findMicroMarketResponse" type="tns:findMicroMarketResponse"/>
+
+<xs:element name="findRangeMicroMarket" type="tns:findRangeMicroMarket"/>
+
+<xs:element name="findRangeMicroMarketResponse" type="tns:findRangeMicroMarketResponse"/>
+
+<xs:element name="microMarket" type="tns:microMarket"/>
+
+<xs:element name="removeMicroMarket" type="tns:removeMicroMarket"/>
+
+<xs:complexType name="findAllMicroMarket">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllMicroMarketResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:microMarket" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="microMarket">
+<xs:sequence>
+<xs:element name="areaLength" type="xs:double" minOccurs="0"/>
+<xs:element name="areaWidth" type="xs:double" minOccurs="0"/>
+<xs:element name="radius" type="xs:double" minOccurs="0"/>
+<xs:element name="zipCode" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findRangeMicroMarket">
+<xs:sequence>
+<xs:element name="range" type="xs:int" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findRangeMicroMarketResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:microMarket" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editMicroMarket">
+<xs:sequence>
+<xs:element name="entity" type="tns:microMarket" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="countMicroMarket">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="countMicroMarketResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findMicroMarket">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findMicroMarketResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:microMarket" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createMicroMarket">
+<xs:sequence>
+<xs:element name="entity" type="tns:microMarket" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeMicroMarket">
+<xs:sequence>
+<xs:element name="entity" type="tns:microMarket" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

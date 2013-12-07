@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/ServerSOAP-war/CustomerService?wsdl" uri="src/conf/xml-resources/web-service-references/CustomerService/wsdl/localhost_8080/ServerSOAP-war/CustomerService.wsdl"/>
+    <system systemId="http://localhost:8080/ServerSOAP-war/CustomerService?xsd=1" uri="src/conf/xml-resources/web-service-references/CustomerService/wsdl/localhost_8080/ServerSOAP-war/CustomerService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ServerSOAP-war/DiscountCodeService?wsdl" uri="src/conf/xml-resources/web-service-references/DiscountCodeService/wsdl/localhost_8080/ServerSOAP-war/DiscountCodeService.wsdl"/>
+    <system systemId="http://localhost:8080/ServerSOAP-war/DiscountCodeService?xsd=1" uri="src/conf/xml-resources/web-service-references/DiscountCodeService/wsdl/localhost_8080/ServerSOAP-war/DiscountCodeService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ServerSOAP-war/MicroMarketService?wsdl" uri="src/conf/xml-resources/web-service-references/MicroMarketService/wsdl/localhost_8080/ServerSOAP-war/MicroMarketService.wsdl"/>
+    <system systemId="http://localhost:8080/ServerSOAP-war/MicroMarketService?xsd=1" uri="src/conf/xml-resources/web-service-references/MicroMarketService/wsdl/localhost_8080/ServerSOAP-war/MicroMarketService.xsd_1.xsd"/>
+</catalog>

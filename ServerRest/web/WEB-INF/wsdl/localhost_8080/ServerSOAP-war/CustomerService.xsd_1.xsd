@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://soap.service/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://soap.service/">
+
+<xs:element name="countCustomer" type="tns:countCustomer"/>
+
+<xs:element name="countCustomerResponse" type="tns:countCustomerResponse"/>
+
+<xs:element name="createCustomer" type="tns:createCustomer"/>
+
+<xs:element name="customer" type="tns:customer"/>
+
+<xs:element name="discountCode" type="tns:discountCode"/>
+
+<xs:element name="editCustomer" type="tns:editCustomer"/>
+
+<xs:element name="findAllCustomer" type="tns:findAllCustomer"/>
+
+<xs:element name="findAllCustomerResponse" type="tns:findAllCustomerResponse"/>
+
+<xs:element name="findCustomer" type="tns:findCustomer"/>
+
+<xs:element name="findCustomerResponse" type="tns:findCustomerResponse"/>
+
+<xs:element name="findRangeCustomer" type="tns:findRangeCustomer"/>
+
+<xs:element name="findRangeCustomerResponse" type="tns:findRangeCustomerResponse"/>
+
+<xs:element name="microMarket" type="tns:microMarket"/>
+
+<xs:element name="removeCustomer" type="tns:removeCustomer"/>
+
+<xs:complexType name="removeCustomer">
+<xs:sequence>
+<xs:element name="entity" type="tns:customer" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="customer">
+<xs:sequence>
+<xs:element name="addressline1" type="xs:string" minOccurs="0"/>
+<xs:element name="addressline2" type="xs:string" minOccurs="0"/>
+<xs:element name="city" type="xs:string" minOccurs="0"/>
+<xs:element name="creditLimit" type="xs:int" minOccurs="0"/>
+<xs:element name="customerId" type="xs:int" minOccurs="0"/>
+<xs:element ref="tns:discountCode" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="fax" type="xs:string" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="phone" type="xs:string" minOccurs="0"/>
+<xs:element name="state" type="xs:string" minOccurs="0"/>
+<xs:element name="zip" type="tns:microMarket" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="discountCode">
+<xs:sequence>
+<xs:element name="discountCode" type="xs:unsignedShort" minOccurs="0"/>
+<xs:element name="rate" type="xs:decimal" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="microMarket">
+<xs:sequence>
+<xs:element name="areaLength" type="xs:double" minOccurs="0"/>
+<xs:element name="areaWidth" type="xs:double" minOccurs="0"/>
+<xs:element name="radius" type="xs:double" minOccurs="0"/>
+<xs:element name="zipCode" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllCustomer">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customer" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editCustomer">
+<xs:sequence>
+<xs:element name="entity" type="tns:customer" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findCustomer">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customer" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="countCustomer">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="countCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createCustomer">
+<xs:sequence>
+<xs:element name="entity" type="tns:customer" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findRangeCustomer">
+<xs:sequence>
+<xs:element name="range" type="xs:int" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findRangeCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:customer" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

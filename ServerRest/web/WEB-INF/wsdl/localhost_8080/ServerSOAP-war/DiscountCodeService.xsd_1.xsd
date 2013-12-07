@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://soap.service/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://soap.service/">
+
+<xs:element name="countDiscountCode" type="tns:countDiscountCode"/>
+
+<xs:element name="countDiscountCodeResponse" type="tns:countDiscountCodeResponse"/>
+
+<xs:element name="createDiscountCode" type="tns:createDiscountCode"/>
+
+<xs:element name="discountCode" type="tns:discountCode"/>
+
+<xs:element name="editDiscountCode" type="tns:editDiscountCode"/>
+
+<xs:element name="findAllDiscountCode" type="tns:findAllDiscountCode"/>
+
+<xs:element name="findAllDiscountCodeResponse" type="tns:findAllDiscountCodeResponse"/>
+
+<xs:element name="findDiscountCode" type="tns:findDiscountCode"/>
+
+<xs:element name="findDiscountCodeResponse" type="tns:findDiscountCodeResponse"/>
+
+<xs:element name="findRangeDiscountCode" type="tns:findRangeDiscountCode"/>
+
+<xs:element name="findRangeDiscountCodeResponse" type="tns:findRangeDiscountCodeResponse"/>
+
+<xs:element name="removeDiscountCode" type="tns:removeDiscountCode"/>
+
+<xs:complexType name="findRangeDiscountCode">
+<xs:sequence>
+<xs:element name="range" type="xs:int" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findRangeDiscountCodeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:discountCode" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="discountCode">
+<xs:sequence>
+<xs:element name="discountCode" type="xs:unsignedShort" minOccurs="0"/>
+<xs:element name="rate" type="xs:decimal" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllDiscountCode">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllDiscountCodeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:discountCode" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeDiscountCode">
+<xs:sequence>
+<xs:element name="entity" type="tns:discountCode" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createDiscountCode">
+<xs:sequence>
+<xs:element name="entity" type="tns:discountCode" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findDiscountCode">
+<xs:sequence>
+<xs:element name="id" type="xs:anyType" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findDiscountCodeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:discountCode" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="editDiscountCode">
+<xs:sequence>
+<xs:element name="entity" type="tns:discountCode" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="countDiscountCode">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="countDiscountCodeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
