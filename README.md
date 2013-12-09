@@ -15,7 +15,7 @@ findAll...............findAll(){...-------> Client
 http://i44.tinypic.com/2cffo7c.png
 				  
 
-I used Netbeans and BD example Java.
+I used Netbeans 4.3 and BD example Java.
 
 
 Advices
